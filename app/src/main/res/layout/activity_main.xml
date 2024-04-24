@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Constraint Layout as the parent layout-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="#CFCDCD"
+    tools:context=".MainActivity">
+
+    <!--Linear Layout as the child layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-287dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Long Press to Check"
+            android:textColor="#4CAF50"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <!--CardView for Taj Mahal -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardTajMahal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight=".5"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="4dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Taj Mahal"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="15dp"
+                        android:text="It is Ivory White Marbel Statue on South Bank of Yamuna River"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--CardView for Statue of Unity -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardStatueOfUnity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight=".5"
+                android:checkable="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="4dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Statue Of Unity"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="15dp"
+                        android:text="It is a statue of Indian Independence Activist
+								Sardar Vallabh Bhai Patel"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!--Card View for Lotus Temple-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardLotusTemple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="5dp"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="4dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txvLotusTemple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Lotus Temple"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Notable for its flowerlike shape, located in Delhi, India, is a Baha'i House of worship that was dedicated in December 1986."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/btnWhatsSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:backgroundTint="#B13C3C"
+            android:text="Show what's selected"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
